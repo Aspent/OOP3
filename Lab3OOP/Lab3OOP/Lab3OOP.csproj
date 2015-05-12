@@ -44,7 +44,12 @@
     <Compile Include="Domain\Batch.cs" />
     <Compile Include="Domain\Product.cs" />
     <Compile Include="Domain\ProductDescription.cs" />
+    <Compile Include="Domain\ProductDescriptionsRepository.cs" />
+    <Compile Include="Domain\ProductsRepository.cs" />
     <Compile Include="Domain\WorkLogEntry.cs" />
+    <Compile Include="Executables\AddBatchExecutable.cs" />
+    <Compile Include="Executables\ProductCreator.cs" />
+    <Compile Include="Executables\WorkLogEntryCreator.cs" />
     <Compile Include="MenuEngine\IExecutable.cs" />
     <Compile Include="MenuEngine\Menu.cs" />
     <Compile Include="MenuEngine\MenuCommand.cs" />
