@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Lab3OOP
+namespace Lab3OOP.Domain
 {
     class Product
     {
@@ -68,33 +68,6 @@ namespace Lab3OOP
                 return totalTime;
             }
         }
-
-        #endregion
-
-        #region Methods
-
-        //public static Product CreateFromConsole()
-        //{
-        //    Console.WriteLine("Введите серийный номер изделия");
-        //    var serialNumber = Console.ReadLine();
-        //    Console.WriteLine("Введите время изготовления изделия");
-        //    var releaseDateTime = Convert.ToDateTime(Console.ReadLine());
-        //    Console.WriteLine("Введите true, если изделие является бракованным; false, если не является бракованным");
-        //    var isDefective = Convert.ToBoolean(Console.ReadLine());
-        //    var description = new NomenclatureSelector().Select();
-
-        //    Console.WriteLine("Введите количество записей в журнале рабочего времени");
-        //    var count = Convert.ToInt32(Console.ReadLine());
-        //    var workLogEntries = new List<WorkLogEntry>();
-        //    for (var i = 1; i <= count; i++)
-        //    {
-        //        Console.WriteLine("Время работы в {0} записи: ", i);
-        //        workLogEntries.Add(WorkLogEntry.CreateFromConsole());
-        //        Console.WriteLine();
-        //    }
-
-        //    return new Product(isDefective, releaseDateTime, serialNumber, description, workLogEntries);
-        //}
 
         #endregion
     }

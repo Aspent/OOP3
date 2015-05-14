@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lab3OOP
+namespace Lab3OOP.Domain
 {
     class ProductDescription
     {
@@ -38,17 +38,6 @@ namespace Lab3OOP
         public string Title
         {
             get { return _title; }
-        }
-
-        #endregion
-
-        #region Methods
-
-        public void Show()
-        {
-            Console.WriteLine("Артикул: {0}", _aritcle);
-            Console.WriteLine("Норма рабочего времени: {0}", _standardTime);
-            Console.WriteLine("Название: {0}", _title);        
         }
 
         #endregion

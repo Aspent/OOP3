@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Lab3OOP
+namespace Lab3OOP.Domain
 {
     class Batch
     {
@@ -41,31 +41,6 @@ namespace Lab3OOP
             get { return _products; }
         }
 
-
-        #endregion
-
-        #region Methods
-
-        //public static Batch CreateFromConsole()
-        //{
-        //    Console.WriteLine("Введите название партии изделий");
-        //    var barcode = Console.ReadLine();
-        //    Console.WriteLine("Введите дату и время изготовления партии (в формате дд/мм/гггг час:минтута:секунда)");
-        //    var releaseTime = Convert.ToDateTime(Console.ReadLine());
-
-        //    Console.WriteLine("Введите количество изделий, входящих в партию");
-        //    var productCount = Convert.ToInt32(Console.ReadLine());
-        //    var products = new List<Product>();
-
-        //    for (var i = 1; i <= productCount; i++)
-        //    {
-        //        Console.WriteLine("{0} изделие: ", i);
-        //        var product = Product.CreateFromConsole();
-        //        products.Add(product);
-        //        Console.WriteLine();
-        //    }
-        //    return new Batch(barcode, releaseTime, products);
-        //}
 
         #endregion
     }

@@ -1,1 +1,6 @@
 D:\Мои документы\Visual Studio 2013\Projects\Lab3OOP\Lab3OOP\Lab3OOP\Lab3OOP\bin\Debug\Lab3OOP.exe.config
+D:\Мои документы\Visual Studio 2013\Projects\Lab3OOP\Lab3OOP\Lab3OOP\Lab3OOP\obj\Debug\Lab3OOP.csprojResolveAssemblyReference.cache
+D:\Мои документы\Visual Studio 2013\Projects\Lab3OOP\Lab3OOP\Lab3OOP\Lab3OOP\bin\Debug\Lab3OOP.exe
+D:\Мои документы\Visual Studio 2013\Projects\Lab3OOP\Lab3OOP\Lab3OOP\Lab3OOP\bin\Debug\Lab3OOP.pdb
+D:\Мои документы\Visual Studio 2013\Projects\Lab3OOP\Lab3OOP\Lab3OOP\Lab3OOP\obj\Debug\Lab3OOP.exe
+D:\Мои документы\Visual Studio 2013\Projects\Lab3OOP\Lab3OOP\Lab3OOP\Lab3OOP\obj\Debug\Lab3OOP.pdb

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lab3OOP
+namespace Lab3OOP.Domain
 {
     class WorkLogEntry
     {

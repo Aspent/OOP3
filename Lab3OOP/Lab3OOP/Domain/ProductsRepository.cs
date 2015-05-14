@@ -8,9 +8,33 @@ namespace Lab3OOP.Domain
 {
     class ProductsRepository
     {
-        private List<Product> _products = new List<Product>();
+        private List<Product> _products;
 
-        public void Add(Product product)
+        public ProductsRepository()
+        {
+            _products = new List<Product>();
+        }
+
+        public ProductsRepository(List<Product> products)
+        {
+            _products = products;
+        }
+
+        public List<Product> GetAll()
+        {
+            return _products;
+        }
+
+        public Product GetByNumber(int number)
+        {
+            if(number >= 1 && number <= _products.Count)
+            {
+                return _products[number - 1];
+            }
+            return null;
+        }
+
+        public void AddProduct(Product product)
         {
             _products.Add(product);
         }

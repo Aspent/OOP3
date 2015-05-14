@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Lab3OOP.MenuEngine;
+using System.Threading.Tasks;
 using Lab3OOP.Domain;
+using Lab3OOP.MenuEngine;
 
-namespace Lab3OOP.Executables
+namespace Lab3OOP.Executables 
 {
-    class AddBatchExecutable: IExecutable
+    class ChooseBatchExecutable : IExecutable
     {
         private readonly BatchesRepository _batchesRepository;
 
-        public AddBatchExecutable(BatchesRepository repository)
+        public ChooseBatchExecutable(BatchesRepository repository)
         {
             _batchesRepository = repository;
         }
 
         public void Execute()
         {
-            Console.WriteLine("Введите название партии изделий");
-            var barcode = Console.ReadLine();
-            Console.WriteLine("Введите дату и время изготовления партии (в формате дд/мм/гггг час:минтута:секунда)");
-            var releaseTime = DateTime.Parse(Console.ReadLine());
-            var products = new List<Product>();
+            Console.WriteLine("Введите номер партии");
+            var number = int.Parse(Console.ReadLine());
 
-            var productsRepos = new ProductsRepository(products);
+            var batch = _batchesRepository.GetByNumber(number);
+
+            var productsRepos = new ProductsRepository(batch.Products);
             Menu productMenu = new Menu();
 
             productMenu.AddCommand(new MenuCommand("Добавить новое изделие"
@@ -36,10 +36,6 @@ namespace Lab3OOP.Executables
             productMenu.AddCommand(new MenuCommand("Продолжить"
                 , new ContinueExecutable()));
             productMenu.Run();
-
-            var batch = new Batch(barcode, releaseTime, products);
-            _batchesRepository.AddBatch(batch);
-            Console.Clear();
         }
     }
 }

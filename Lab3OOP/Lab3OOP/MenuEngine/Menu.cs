@@ -18,6 +18,7 @@ namespace Lab3OOP.MenuEngine
             foreach(var t in _commands)
             {
                 Console.WriteLine("{0} - {1}", number, t.Title);
+                number++;
             }
         }
 
@@ -25,7 +26,9 @@ namespace Lab3OOP.MenuEngine
         {
             Console.WriteLine("Введите номер команды: ");
             int number = int.Parse(Console.ReadLine());
+            Console.WriteLine();
             return number;
+            
         }
 
         public void ExecuteCommand(int number)
@@ -36,44 +39,17 @@ namespace Lab3OOP.MenuEngine
 
         public void Run()
         {
+            Console.Clear();
             while(true)
             {
                 PrintCommands();
-                var number = ReadCommand();
+                var number = ReadCommand();   
                 ExecuteCommand(number);
+                if(number == _commands.Count)
+                {
+                    break;
+                }
             }
         }
-
-        //public void Run()
-        //{
-        //    var batchCreator = new BatchCreator();
-        //    var batch = batchCreator.Create();
-
-        //    var productCreator = new ProductCreator();
-
-        //    Console.WriteLine("Введите количество изделий, входящих в партию");
-        //    var productCount = Convert.ToInt32(Console.ReadLine());
-
-        //    for (var i = 1; i <= productCount; i++)
-        //    {
-        //        Console.WriteLine("{0} изделие: ", i);
-        //        var product = productCreator.Create();
-
-        //        Console.WriteLine("Введите количество записей в журнале рабочего времени");
-        //        var entriesCount = Convert.ToInt32(Console.ReadLine());
-        //        for (var j = 1; j <= entriesCount; j++)
-        //        {
-        //            Console.WriteLine("Время работы в {0} записи: ", j);
-        //            var workLogEntryCreator = new WorkLogEntryCreator();
-        //            var workLogEntry = workLogEntryCreator.Create();
-        //            product.WorkLogEntries.Add(workLogEntry);
-        //            Console.WriteLine();
-        //        }
-        //        batch.Products.Add(product);
-        //    }
-
-        //    var evaluator = new QualityEvaluator();
-        //    Console.WriteLine("Категория качества партии {1} = {0}", evaluator.GetQualityCategory(batch), batch.Barcode);
-        //}
     }
 }
